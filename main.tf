@@ -34,6 +34,8 @@ module "db" {
   password            = "${var.password}"
   instance_class      = "${var.instance_class}"
   multi_az            = "${var.multi_az}"
+  engine              = "${var.engine}"
+  engine_version      = "${var.engine_verion}"
   allocated_storage   = "${var.allocated_storage}"
   skip_final_snapshot = "${var.skip_final_snapshot}"
 }

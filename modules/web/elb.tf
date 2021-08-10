@@ -2,10 +2,9 @@
 # ELB
 # ---------------------------------------------------------------------------------------------------------------------
 
-resource "aws_lb" "alb" {
-  name            = "${var.env}-alb"
-  internal           = false
-  load_balancer_type = "application"
+
+resource "aws_elb" "elb" {
+  name            = "${var.env}-elb"
   security_groups = ["${var.private_sg}", "${var.public_sg}"]
   subnets         = ["${var.public_subnet_b}", "${var.public_subnet_c}"]
 
